@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1만 시간의 법칙</title>
+    <link rel="stylesheet" href="/css/10000hours.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/10000hours.js"></script>
+</head>
+<body>
+    <main id="mainWrap">
+        <!-- header -->
+        <header id="header">
+            <h1 class="logo"><img src="/img/title.png" alt="1만 시간의 법칙"></h1>
+        </header>
+
+        <!-- section01 -->
+        <section id="sec1">
+            <h2>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</h2>
+            <div class="sec_detail">
+                <ul>
+                    <li>
+                        <p>
+                            "연습은 어제의 당신보다 당신을 더 낫게 만든다."
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>1만 시간의 법칙</span>은<br>
+                            어떤 분야의 전문가가 되기 위해서는<br>
+                            최소한 1만 시간의 훈련이 필요하다는 법칙이다.
+                        </p>
+                    </li>
+                    <li>
+                        <div>나는<input type="text" class="job" placeholder="예)프로그래밍">전문가가 될 것이다.</div>
+                        <div>그래서 앞으로 매일 하루에<input type="number" class="num" placeholder="예)5시간">시간씩 훈련할 것이다.</div>
+                    </li>
+                </ul>
+                <button type="submit" class="how btnY">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
+            </div>
+        </section>
+        
+        <!-- section02 -->
+        <section id="sec2"> 
+            <h2>훈련하러가기</h2>
+            <div class="result">
+                당신은 <span class="a_job">프로그래밍</span> 전문가가 되기 위해서<br>
+                대략 <span class="a_num">5110</span> 일 이상 훈련하셔야 합니다! :)
+            </div>
+            <div class="buttonWrap">
+                <button class="btn btnY opendia" onclick="showModal()">훈련하러 가기 GO!GO!</button>
+                <button class="btn">공유하기</button>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="ft_logo"><img src="img/logo.png" alt="weniv "></div>
+            <p>
+                ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br>
+                수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
+            </p>
+        </footer>
+
+        <!-- modal01 -->
+        <dialog id="modal01">
+            <div class="diawrap">
+                <div class="title">
+                    <span>화이팅!!<strong>♥♥♥</strong></span>
+                    당신의 꿈을 응원합니다!
+                </div>
+                <div class="anima"><img src="/img/licat.png" alt=""></div>
+                <a href="https://www.naver.com" target="_blank" class="btnY how">종료하고 진짜 훈련하러 가기 GO!GO!</a>
+            </div>
+        </dialog>
+        <script>
+            const dia_open = document.querySelector(".opendia");
+            const dia_modal = document.querySelector("#modal01");
+            dia_open.addEventListener('click', () => {
+                dia_modal.showModal()
+            });
+            dia_modal.addEventListener('click', () => {
+                dia_modal.close()
+            });
+        </script>
+    </main>
+</body>
+</html>
